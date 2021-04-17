@@ -14,8 +14,15 @@ def on_move(x, y):
         exit()
 
 def on_click(x, y, button, pressed):
+    button_clicked = ''
+    if button == mouse.Button.right:
+        button_clicked = 'Right'
+    elif button == mouse.Button.left:
+        button_clicked = 'Left'
+    elif button == mouse.Button.middle:
+        button_clicked = 'Middle'
     f.write('{0} at {1}. Time: {2}\n'.format(
-        'Pressed' if pressed else 'Released',
+        button_clicked,
         (x, y), time.time()-start))
     if time.time()-start>=period:
         listener.stop()
