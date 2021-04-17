@@ -1,4 +1,4 @@
 # MouseLogger
 Software for preventing third persons' physical access
 # Requirements
-pynput
+python 3.x, pynput
